@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="SubVowelTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2016-04-22T17:35:48" hostname="Liams-MacBook-Air.local" time="0.006">
+<testsuite name="SubVowelTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2016-04-22T20:47:26" hostname="Liams-MacBook-Air.local" time="0.009">
   <properties/>
-  <testcase name="doesSubVowel_ReturnsSplitWord" classname="SubVowelTest" time="0.005"/>
-  <testcase name="doesSubVowel_ReturnString" classname="SubVowelTest" time="0.0"/>
+  <testcase name="doesSubVowel_ReturnsSplitWord" classname="SubVowelTest" time="0.004"/>
+  <testcase name="doesSubVowel_ReturnString" classname="SubVowelTest" time="0.001"/>
   <testcase name="doesSubVowel_ReturnsSameInputString" classname="SubVowelTest" time="0.0"/>
-  <system-out><![CDATA[[Ljava.lang.String;@72bf9cb
+  <testcase name="doesSubVowel_ReturnsVowelsSubbed" classname="SubVowelTest" time="0.001"/>
+  <system-out><![CDATA[[Ljava.lang.String;@7b129ab1
+G--d m-rn-ng l-d--s -nd g-ntl-m-n
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

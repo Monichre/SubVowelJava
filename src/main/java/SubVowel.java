@@ -16,8 +16,7 @@ public class SubVowel {
 
 
 	}
-  
-
+ 
 	public static String[] ReturnSplitWord(String word){
 
   		String[] splitInput = word.split("");
@@ -28,9 +27,8 @@ public class SubVowel {
 
   }
 
-  public static String[] ReturnVowelSub(String word){
+  public static String ReturnVowelSub(String word){
   		String [] vowels = {"a", "e", "i", "o", "u"};
-  		String[] splitInput = word.split("");
 
   		for (String v : vowels)
   			word = word.replace(v, "-");

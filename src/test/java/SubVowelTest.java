@@ -42,4 +42,16 @@ public class SubVowelTest {
    assertEquals(vow, testArray);
 
   }
+
+  @Test
+  public void doesSubVowel_ReturnsVowelsSubbed() {
+
+    SubVowel instanceOfSubVowel = new SubVowel();
+    String testString = "G--d m-rn-ng l-d--s -nd g-ntl-m-n";
+    String testReturn = instanceOfSubVowel.ReturnVowelSub("Good morning ladies and gentlemen");
+    
+
+   assertEquals(testString, testReturn);
+
+  }
 }

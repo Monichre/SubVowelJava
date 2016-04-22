@@ -1,1 +1,19 @@
 /*this is my custom css file*/
+
+body{
+ margin: 10px;
+}
+
+h1 {
+	text-align: center;
+}
+
+.container {
+	margin: auto;
+}
+
+form {
+	margin: auto;
+	text-align: center;
+	width: 50%;
+}
