@@ -1,8 +1,22 @@
-public class SubVowel {
-  public static void main(String[] args) {}
+import java.util.HashMap;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Set;
+import java.util.*;
 
-  // public Boolean isLeapYear(Integer year) {
-  //   // eventually put your code here
-  //   return false;
-  // }
+
+
+
+public class SubVowel {
+
+	public static String ReturnInputString(String word){
+
+
+		return word;
+
+
+	}
+  
+
+  
 }
