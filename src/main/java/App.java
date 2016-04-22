@@ -25,8 +25,22 @@ public class App {
 	 
 	  model.put("user-input", subInstance.ReturnVowelSub(userInput)); 
 	  model.put("template", "templates/results.vtl");
-	  return new ModelAndView(model, "templates/layout.vtl");
+	  return new ModelAndView(model, layout);
 	}, new VelocityTemplateEngine());
+
+    get("/results", (request, response) -> {
+	  HashMap model = new HashMap();
+	  SubVowel subInstance = new SubVowel();
+	  String userInput = request.queryParams("user-input");
+	  String hintOutput = request.queryParams("hint-yes");
+
+
+	  model.put("hint-yes", subInstance.ReturnHint(userInput)); 
+	  model.put("template", "templates/hintResults.vtl");
+	  
+	  return new ModelAndView(model, layout);
+	}, new VelocityTemplateEngine());
+
 
   }  
 }

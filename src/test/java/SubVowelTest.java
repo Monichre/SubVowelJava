@@ -50,8 +50,19 @@ public class SubVowelTest {
     String testString = "G--d m-rn-ng l-d--s -nd g-ntl-m-n";
     String testReturn = instanceOfSubVowel.ReturnVowelSub("Good morning ladies and gentlemen");
     
-
    assertEquals(testString, testReturn);
+
+  }
+
+  @Test
+  public void does_ReturnFirstWord() {
+
+    SubVowel instanceOfSubVowel = new SubVowel();
+    String testFirstWord = "Good  m-rn-ng l-d--s";
+    
+    String testReturn = instanceOfSubVowel.ReturnHint("Good morning ladies");
+    
+   assertEquals(testFirstWord, testReturn);
 
   }
 }

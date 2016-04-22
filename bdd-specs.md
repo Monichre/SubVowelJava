@@ -6,4 +6,4 @@ BDD SPECS
 
 3: App takes string and returns split string// input = "example" // return = ["e", "x", "a", "m", ....you get it]
 
-4: App takes string and returns same string with vowels subbed for "-"
+4: App takes string and returns same string with all vowels subbed with "-"
