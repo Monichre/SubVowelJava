@@ -11,12 +11,34 @@ public class SubVowel {
 
 	public static String ReturnInputString(String word){
 
-
+	
 		return word;
 
 
 	}
   
 
-  
+	public static String[] ReturnSplitWord(String word){
+
+  		String[] splitInput = word.split("");
+
+		System.out.println(splitInput.toString());
+		return splitInput;
+
+
+  }
+
+  public static String[] ReturnVowelSub(String word){
+  		String [] vowels = {"a", "e", "i", "o", "u"};
+  		String[] splitInput = word.split("");
+
+  		for (String v : vowels)
+  			word = word.replace(v, "-");
+
+		System.out.println(word);
+		return word;
+
+
+  }
+
 }

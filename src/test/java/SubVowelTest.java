@@ -30,4 +30,16 @@ public class SubVowelTest {
    assertEquals(true, testString.equals(appString));
 
   }
+
+  @Test
+  public void doesSubVowel_ReturnsSplitWord() {
+
+    SubVowel instanceOfSubVowel = new SubVowel();
+    String[] vow = {"a", "b", "c"};
+    String[] testArray = instanceOfSubVowel.ReturnSplitWord("abc");
+    
+
+   assertEquals(vow, testArray);
+
+  }
 }
