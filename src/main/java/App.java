@@ -13,7 +13,6 @@ public class App {
 
     get("/", (request, response) -> {
 	  HashMap model = new HashMap();
-
 	  model.put("template", "templates/form.vtl");
 	  return new ModelAndView(model, layout);
 	}, new VelocityTemplateEngine());
@@ -21,23 +20,23 @@ public class App {
     get("/results", (request, response) -> {
 	  HashMap model = new HashMap();
 	  SubVowel subInstance = new SubVowel();
-	  String userInput = request.queryParams("user-input");
-	 
-	  model.put("user-input", subInstance.ReturnVowelSub(userInput)); 
+	  String userInput = request.queryParams("user-input"); 
+	  request.session().attribute("user-input", userInput);   
+	  model.put("coded-input", subInstance.returnVowelSub(userInput));
 	  model.put("template", "templates/results.vtl");
 	  return new ModelAndView(model, layout);
 	}, new VelocityTemplateEngine());
 
-    get("/results", (request, response) -> {
+    post("/hint", (request, response) -> {
 	  HashMap model = new HashMap();
 	  SubVowel subInstance = new SubVowel();
-	  String userInput = request.queryParams("user-input");
-	  String hintOutput = request.queryParams("hint-yes");
-
-
-	  model.put("hint-yes", subInstance.ReturnHint(userInput)); 
-	  model.put("template", "templates/hintResults.vtl");
-	  
+	  String userInput = request.session().attribute("user-input");  
+	  int counter = 1;
+	  String hint = subInstance.returnHint(userInput);
+	  model.put("coded-input", subInstance.returnVowelSub(userInput));
+	  model.put("hint", hint);
+	  model.put("counter", counter);
+	  model.put("template", "templates/results.vtl");
 	  return new ModelAndView(model, layout);
 	}, new VelocityTemplateEngine());
 

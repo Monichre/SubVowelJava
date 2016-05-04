@@ -25,7 +25,7 @@ public class AppTest extends FluentTest {
 
  
   @Test
-    public void ReturnVowelSub() {
+    public void returnVowelSub() {
     goTo("http://localhost:4567");
     fill("#user-input").with("This is a test string, it should work now");
     submit(".btn");
