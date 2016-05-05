@@ -39,7 +39,5 @@ public class App {
 	  model.put("template", "templates/results.vtl");
 	  return new ModelAndView(model, layout);
 	}, new VelocityTemplateEngine());
-
-
   }  
 }
